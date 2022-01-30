@@ -1,0 +1,16 @@
+repos:
+  # pre-commit install --hook-type pre-push
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.1.0
+    hooks:
+      - id: check-json
+      - id: check-yaml
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+  - repo: https://github.com/pre-commit/mirrors-prettier/
+    rev: v2.5.1
+    hooks:
+      - id: prettier
+        additional_dependencies:
+          ["prettier@2.5.1", "prettier-plugin-solidity@v1.0.0-beta.19"]

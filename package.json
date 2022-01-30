@@ -1,0 +1,22 @@
+{
+  "name": "@corkspork/micro-lottery",
+  "version": "1.0.0",
+  "keywords": [
+    "ethereum",
+    "react"
+  ],
+  "private": true,
+  "scripts": {
+    "frontend:build": "yarn workspace @corkspork/micro-lottery-frontend build",
+    "frontend:start": "yarn workspace @corkspork/micro-lottery-frontend start",
+    "frontend:test": "yarn workspace @corkspork/micro-lottery-frontend test",
+    "contracts:test": "yarn workspace @corkspork/micro-lottery-contracts test",
+    "contracts:start": "yarn workspace @corkspork/micro-lottery-contracts start",
+    "audit-fix": "npm i --package-lock-only && rm yarn.lock && npm audit fix || true  && yarn install && rm package-lock.json"
+  },
+  "workspaces": [
+    "frontend",
+    "contracts"
+  ],
+  "packageManager": "yarn@3.1.1"
+}
