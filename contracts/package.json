@@ -29,6 +29,7 @@
   },
   "scripts": {
     "deploy-rinkeby": "hardhat run scripts/deploy.js --network rinkeby",
+    "deploy-polygon-mumbai": "hardhat run scripts/deploy.js --network polygon_mumbai",
     "start": "(echo \"waiting 5 seconds for node to start\" && sleep 5 && hardhat run scripts/start.js --network localhost) & hardhat node",
     "test": "hardhat test test/unit/*"
   }

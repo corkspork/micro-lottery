@@ -12,6 +12,7 @@
     "frontend:test": "yarn workspace @corkspork/micro-lottery-frontend test",
     "contracts:test": "yarn workspace @corkspork/micro-lottery-contracts test",
     "contracts:start": "yarn workspace @corkspork/micro-lottery-contracts start",
+    "contracts:deploy-polygon-mumbai": "yarn workspace @corkspork/micro-lottery-contracts deploy-polygon-mumbai",
     "audit-fix": "npm i --package-lock-only && rm yarn.lock && npm audit fix || true  && yarn install && rm package-lock.json"
   },
   "workspaces": [
