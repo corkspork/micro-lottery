@@ -15,10 +15,8 @@ jobs:
     name: Deploying frontend to surge
     steps:
       - uses: actions/checkout@v1
-      - name: Install node
-        uses: actions/setup-node@v1
-        with:
-          node-version: 8
+      - name: asdf_install
+        uses: asdf-vm/actions/install@v1
       - name: Install surge
         run: npm install -g surge
       - name: Install dependencies
