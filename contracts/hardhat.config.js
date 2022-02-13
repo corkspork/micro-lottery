@@ -38,7 +38,12 @@ module.exports = {
     rinkeby: {
       url: process.env.RINKEBY_URL || "",
       accounts:
-        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+        process.env.RINKEBY_PRIVATE_KEY !== undefined ? [process.env.RINKEBY_PRIVATE_KEY] : [],
+    },
+    polygon_mumbai: {
+      url: process.env.POLYGON_MUMBAI_URL || "",
+      accounts:
+        process.env.POLYGON_MUMBAI_PRIVATE_KEY !== undefined ? [process.env.POLYGON_MUMBAI_PRIVATE_KEY] : [],
     },
   },
   etherscan: {
@@ -58,6 +63,14 @@ module.exports = {
         "0x2ed0feb3e7fd2022120aa84fab1945545a9f2ffc9076fd6156fa96eaff4c1311",
       vrfCoordinator: "0xb3dCcb4Cf7a26f6cf6B120Cf5A73875B7BBc655B",
       fee: "100000000000000000",
+    },
+    4: {
+      name: "polygon_mumbai",
+      linkToken: "0x326C977E6efc84E512bB9C30f76E30c160eD06FB",
+      keyHash:
+        "0x6e75b569a01ef56d18cab6a8e71e6600d6ce853834d4a5748b720d06f878b3a4",
+      vrfCoordinator: "0xb3dCcb4Cf7a26f6cf6B120Cf5A73875B7BBc655B",
+      fee: "100000000000000",
     },
   },
 };
