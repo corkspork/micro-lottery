@@ -64,7 +64,7 @@ module.exports = {
       vrfCoordinator: "0xb3dCcb4Cf7a26f6cf6B120Cf5A73875B7BBc655B",
       fee: "100000000000000000",
     },
-    4: {
+    80001: {
       name: "polygon_mumbai",
       linkToken: "0x326C977E6efc84E512bB9C30f76E30c160eD06FB",
       keyHash:
