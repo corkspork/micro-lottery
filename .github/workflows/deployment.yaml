@@ -1,0 +1,29 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - "main"
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  deploy-frontend:
+    runs-on: ubuntu-latest
+    environment: "production"
+    name: Deploying frontend to surge
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 8
+      - name: Install surge
+        run: npm install -g surge
+      - name: Install dependencies
+        run: yarn install
+      - name: Build frontend
+        run: yarn frontend:build
+      - name: Deploy
+        run: surge ./frontend/build ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
